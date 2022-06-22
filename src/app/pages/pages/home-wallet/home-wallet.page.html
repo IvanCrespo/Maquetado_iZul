@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+    <app-header></app-header>
+    <div class="container-dashboard">
+        <ion-card class="card-principal">
+            <ion-card-content>
+                <div class="section-balance">
+                    <img src="assets/images/iconos/wallet.svg" />
+                    <div class="info-balance">
+                        <p>Recaudación Actual</p>
+                        <h3>$<ion-label>{{totales}}</ion-label>
+                        </h3>
+                    </div>
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="card-secondary">
+            <ion-card-content>
+                <ion-buttons>
+                    <ion-button (click)="changeTianguis()">
+                        <ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <div class="tianguis">
+                    <ion-icon name="storefront-outline"></ion-icon>
+                    <p>Tianguis {{nombre_tianguis}}</p>
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <ion-card class="card-dashboard">
+            <ion-card-content>
+                <p class="txtRecaudacion txtPadding">Núm. de Cobros<ion-label>{{cobros}}</ion-label>
+                </p>
+                <p class="txtRecaudacion txtPadding">Núm. de Recargas<ion-label>{{recargas}}</ion-label>
+                </p>
+                <p class="txtRecaudacion txtPadding">Total de Cobros<ion-label>${{total_cobros}}</ion-label>
+                </p>
+                <p class="txtRecaudacion">Total de Recargas<ion-label>${{total_recargas}}</ion-label>
+                </p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

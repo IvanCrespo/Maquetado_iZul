@@ -1,0 +1,49 @@
+ion-content {
+    --background: #dddddd;
+
+    .container-qr {
+        padding-top: 5vh;
+
+        ion-card {
+            border-radius: 26px;
+            width: 72%;
+            margin: 0 auto;
+            cursor: pointer;
+            box-shadow: 0px 1.6px 0.6px -17px rgba(0, 0, 0, 0.023), 0px 3.4px 1.4px -17px rgba(0, 0, 0, 0.034),
+                0px 5.8px 2.3px -17px rgba(0, 0, 0, 0.042), 0px 8.7px 3.5px -17px rgba(0, 0, 0, 0.049),
+                0px 12.5px 5px -17px rgba(0, 0, 0, 0.055), 0px 17.7px 7.1px -17px rgba(0, 0, 0, 0.061),
+                0px 25.1px 10.1px -17px rgba(0, 0, 0, 0.068), 0px 36.5px 14.6px -17px rgba(0, 0, 0, 0.076),
+                0px 56.3px 22.5px -17px rgba(0, 0, 0, 0.087), 0px 100px 40px -17px rgba(0, 0, 0, 0.11);
+
+            img {
+                border-radius: 28px;
+                padding: 14px 5px;
+            }
+        }
+
+        .section-QRInfo {
+            text-align: center;
+            padding-top: 5vh;
+
+            p {
+                font-size: 22px;
+                font-family: var(--font-familySubtitle-primary);
+                color: #02635d;
+            }
+        }
+
+        .section-logo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+
+            .logo {
+                float: right;
+                margin-right: 18px;
+                margin-bottom: 16px;
+                width: 38%;
+            }
+        }
+    }
+}

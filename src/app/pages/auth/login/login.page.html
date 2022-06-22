@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <div class="container-logo">
+    <ion-img class="logo" src="../../../../assets/images/logos/logo_izul-principal.png"></ion-img>
+    <ion-label class="ion-padding-top">Bienvenido</ion-label>
+  </div>
+  <div class="container-form">
+    <form [formGroup]="login" class="ion-margin-horizontal" (ngSubmit)="singIn()" novalidate>
+      <div class="ion-margin-vertical ion-margin-horizontal">
+        <ion-item>
+          <ion-input formControlName="user" placeholder="Usuario" type="text" required>
+          </ion-input>
+        </ion-item>
+        <div class="error" *ngIf="login.get('user').invalid && (login.get('user').dirty || login.get('user').touched )">
+          <ion-text class="error" *ngIf="(login.get('user')).errors?.required">* Usuario es requerido
+          </ion-text>
+        </div>
+      </div>
+      <div class="ion-margin-vertical ion-margin-horizontal">
+        <ion-item>
+          <ion-icon [name]="type ? 'eye-outline' : 'eye-off-outline'" slot="end" (click)="ChangeType()"></ion-icon>
+          <ion-input formControlName="password" placeholder="Contraseña" [type]="type ? 'password' : 'text'" required>
+          </ion-input>
+        </ion-item>
+        <div class="error"
+          *ngIf="login.get('password').invalid && (login.get('password').dirty ||login.get('password').touched )">
+          <ion-text class="error" *ngIf="(login.get('password')).errors?.required">* Contraseña es requerida
+          </ion-text>
+        </div>
+      </div>
+      <ion-row class="ion-padding-bottom">
+        <ion-col>
+          <ion-button mode="ios" type="submit" [disabled]="!login.valid">Iniciar Sesión</ion-button>
+        </ion-col>
+      </ion-row>
+      <hr>
+    </form>
+  </div>
+</ion-content>

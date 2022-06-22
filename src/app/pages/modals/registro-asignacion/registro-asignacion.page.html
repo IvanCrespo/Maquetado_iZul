@@ -1,0 +1,90 @@
+<ion-header class="ion-no-border">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>
+        <h2>Asignación de Lugares</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-header>
+<ion-content>
+  <div class="registro-section">
+    <ion-card>
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <div class="radio-list">
+                <label class="radio mt-4" for="radio__toggle1">
+                  <span class="radio__span">
+                    {{ isChecked ? 'Cuenta con registro previo' : 'No cuenta con registro previo' }}
+                  </span>
+                  <input class="radio__toggle" id="radio__toggle1" type="checkbox" [(ngModel)]="isChecked"
+                    (ngModelChange)="onChangeCheckSalida($event)">
+                </label>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-list lines="none" class="bg-transparent" *ngIf="isChecked == false">
+          <ion-item lines="inset">
+            <ion-label position="floating">Nombre (s):</ion-label>
+            <ion-input type="text" [(ngModel)]="s_nombre" name="s_nombre" required></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Apellido Paterno:</ion-label>
+            <ion-input type="text" [(ngModel)]="s_paterno" name="s_paterno" required></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Apellido Materno:</ion-label>
+            <ion-input type="text" [(ngModel)]="s_materno" name="s_materno" required></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Número Telefónico:</ion-label>
+            <ion-input type="number" [(ngModel)]="s_telefono" name="s_telefono" required></ion-input>
+          </ion-item>
+          <ion-item lines="inset">
+            <ion-label position="floating">Giro:</ion-label>
+            <ion-input type="text" [(ngModel)]="s_giro" name="s_giro" required></ion-input>
+            <div class="container_agregar" slot="end" align-self-center (click)="seleccionarGiros()">
+              <ion-icon name="add-outline"></ion-icon>
+            </div>
+          </ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="8">
+                <ion-label position="stacked">¿Requiere descuento INSEN?</ion-label>
+              </ion-col>
+              <ion-col size="4">
+                <div class="radio-list">
+                  <label class="radio mt-4" for="radio__toggle2">
+                    <span class="radio__span">
+                      {{ isCheckedINSEN ? 'Si' : 'No' }}
+                    </span>
+                    <input class="radio__toggle" id="radio__toggle2" type="checkbox" [(ngModel)]="isCheckedINSEN"
+                      (ngModelChange)="onChangeCheckSalidaINSEN($event)">
+                  </label>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+        <ion-item class="qr-selector" *ngIf="isChecked == true">
+          <ion-label class="label-qr" position="floating">Código de Artículo</ion-label>
+          <ion-input type="text" name="textQR" [readonly]="true"></ion-input>
+          <!-- <ion-input type="text" name="textQR" [(ngModel)]="textQR" (ngModelChange)="checkRealTime($event)"
+            [readonly]="true"></ion-input> -->
+          <div class="qr-section" slot="end" align-self-center>
+            <ion-icon name="qr-code-outline"></ion-icon>
+          </div>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <div class="button-save">
+      <button class="btn-guardar" (click)="guardarInfo()">
+        <ion-label>Siguiente</ion-label>
+        <ion-icon name="caret-forward-outline"></ion-icon>
+      </button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-content [fullscreen]="true">
+  <app-header></app-header>
+  <div class="container-impresora">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Configurar Impresora</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="impresoras">
+          <ion-item lines="none">
+            <ion-label>Impresoras</ion-label>
+            <div class="section-btnReload">
+              <ion-button class="btn_reload" (click)="reload()">
+                <ion-icon name="refresh-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-select placeholder="Seleccione" [(ngModel)]="portName" cancelText="Cancelar" okText="Aceptar">
+              <ion-select-option *ngFor="let impresora of impresoras; let i = index" value="{{impresora.portName}}">
+                {{ impresora.modelName }}
+              </ion-select-option>
+            </ion-select>
+            <ion-icon name="print-outline" slot="start"></ion-icon>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>Tamaño de Papel</ion-label>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-select placeholder="Seleccione" [(ngModel)]="size_papel" cancelText="Cancelar" okText="Aceptar">
+              <ion-select-option value="2">2 Pulgadas</ion-select-option>
+              <ion-select-option value="3">3 Pulgadas</ion-select-option>
+            </ion-select>
+            <ion-icon name="document-outline" slot="start"></ion-icon>
+          </ion-item>
+        </div>
+        <div class="section-btnImpresora">
+          <ion-button class="btn_addImpresora" (click)="saveConfig()">
+            <ion-icon name="settings-outline"></ion-icon>
+            Guardar
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="section-logo">
+    <ion-img class="logo" src="../../../../assets/images/logos/logo_izul-principal.png"></ion-img>
+  </div>
+</ion-content>

@@ -1,0 +1,63 @@
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+/* -------------------- Fonts Face -------------------- */
+/* ROBOTO */
+@font-face {
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Light";
+    font-style: normal;
+    src: url("./assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    font-style: normal;
+    src: url("./assets/fonts/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-MediumItalic";
+    font-style: normal;
+    src: url("./assets/fonts/Roboto/Roboto-MediumItalic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    font-style: normal;
+    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+/* -------------------- Posiciones -------------------- */
+/* CENTER SECTION DIV with FLEXBOX */
+.section-center-div {
+    display: flex;
+    justify-content: center;
+}
+
+app-tarjeta-pago {
+    background: #fff;
+}
+
+/* Toast Custom */
+.customToast {
+    color: white;
+}

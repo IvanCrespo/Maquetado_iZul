@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <app-header></app-header>
+  <div class="container-qr">
+    <ion-card (click)="scanBarcode()">
+      <!-- <ion-card (click)="searchScanner('3a5dec0b3c715ce0f092bb475ff1e259')"> -->
+      <ion-card-content>
+        <img src="../../../../assets/images/iconos/qr-code.png">
+      </ion-card-content>
+    </ion-card>
+    <div class="section-QRInfo">
+      <p>Empezar a escanear...</p>
+      <!-- (click)="searchScanner('3827f8f40845ddceefcc02a155de7523')" -->
+      <!-- <ion-button (click)="searchScanner('3827f8f40845ddceefcc02a155de7523')">
+        <ion-icon name="qr-code-outline"></ion-icon>
+      </ion-button> -->
+    </div>
+    <div class="section-logo">
+      <ion-img class="logo" src="../../../../assets/images/logos/logo_izul-principal.png"></ion-img>
+    </div>
+  </div>
+</ion-content>

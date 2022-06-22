@@ -1,0 +1,67 @@
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-buttons slot="end">
+          <ion-button (click)="close(false)">
+            <ion-icon name="return-down-back-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+  </ion-header>
+  <div class="acciones-tarjeta">
+    <div class="abono-tarjeta">
+      <ion-title class="seccion_title">Realizar {{accion}}</ion-title>
+      <div class="cantidad-dinero">
+        <ion-label class="lbl-text">Cantidad Total:</ion-label>
+        <ion-label class="lbl-dinero">${{total}}</ion-label>
+        <ion-button class="btn-cash" (click)="toPay(url)">
+          <ion-icon name="cash-outline"></ion-icon>
+        </ion-button>
+      </div>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Cantidades Admitidas</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid>
+            <ion-row *ngIf="dineroFijo == true">
+              <ion-col size="4" *ngFor="let billete of billetes">
+                <ion-button class="billete" (click)="agregarDinero(billete.billete)">${{billete.billete}}
+                </ion-button>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="dineroFijo == false">
+              <ion-button class="otraCantidad" mode="ios" (click)="otraCantidad()">
+                <ion-icon slot="start" name="card-outline"></ion-icon>
+                Cantidad Fija
+              </ion-button>
+            </ion-row>
+            <hr>
+            <ion-row>
+              <ion-button class="otraCantidad" (click)="otraCantidad()" mode="ios" *ngIf="other == true">
+                <ion-icon slot="start" name="card-outline"></ion-icon>
+                Otra Cantidad
+              </ion-button>
+              <ion-col class="ion-padding-top" size="12" *ngIf="other == false">
+                <ion-label class="sub-otraCantidad">Cantidad a {{accion}}:</ion-label>
+                <ion-input type="number" name="otra_cantidad" [(ngModel)]="otra_cantidad" (ionChange)="ionChangeCantidad($event, otra_cantidad)">$</ion-input>
+              </ion-col>
+            </ion-row>
+            <hr *ngIf="activeConcepto == true">
+            <ion-row *ngIf="activeConcepto == true">
+              <ion-col class="ion-padding-top" size="12">
+                <ion-label class="sub-otraCantidad">Concepto:</ion-label>
+                <ion-input type="text" name="s_concepto" [(ngModel)]="s_concepto"></ion-input>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="section-logo">
+      <ion-img class="logo" src="../../../../assets/images/logos/logo_izul-secundario.png"></ion-img>
+    </div>
+  </div>
+</ion-content>

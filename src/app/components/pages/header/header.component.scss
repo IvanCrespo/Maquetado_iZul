@@ -1,0 +1,35 @@
+ion-header {
+    background: #dddddd;
+    ion-list {
+        background: #02635d !important;
+        border-radius: 0 0 28px 28px;
+        padding: 1.2vh 0vh 1.2vh 0vh;
+
+        ion-item {
+            --background: #02635d;
+
+            h2 {
+                font-weight: 700;
+                font-size: 18px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                letter-spacing: 1px;
+            }
+
+            ion-buttons {
+                ion-button {
+                    --background: var(--background-contenido);
+                    --border-radius: 50%;
+                    height: 45px;
+                    width: 45px;
+
+                    img {
+                        width: 35px;
+                        max-width: 35px;
+                    }
+                }
+            }
+        }
+    }
+}

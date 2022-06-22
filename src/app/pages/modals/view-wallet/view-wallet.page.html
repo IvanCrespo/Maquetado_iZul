@@ -1,0 +1,46 @@
+<ion-content [fullscreen]="true">
+  <ion-header class="ion-no-border">
+    <ion-list>
+      <ion-item lines="none">
+        <ion-buttons slot="end">
+          <ion-button (click)="close(false)">
+            <ion-icon name="close-outline" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </ion-list>
+  </ion-header>
+  <div class="container-tarjeta">
+    <ion-card class="tarjeta">
+      <ion-card-content>
+        <div class="section-tarjeta">
+          <!-- <img src="../../../../assets/images/iconos/chip.png" width="60px"> -->
+          <img src="../../../../assets/images/logos/logo_izul-principal.png" width="60px">
+        </div>
+        <div class="section-codTarjeta">
+          <p>{{s_folio_encrypt_mostrar}}&nbsp;{{s_folio}}</p>
+        </div>
+        <div class="section-infoTarjeta">
+          <p class="title-tarjeta">TARJETA</p>
+        </div>
+        <div class="section-infoTarjeta">
+          <p class="sub-tarjeta">PREPAGO</p>
+          <p class="total-tarjeta">${{n_saldo_disponible}}</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="container-accionWallet">
+    <ion-button (click)="accion('Cobro', 'cobros')" mode="ios">
+      <ion-icon slot="start" name="ticket-outline"></ion-icon>
+      Cobrar
+    </ion-button>
+    <ion-button (click)="accion('Recarga', 'recargas')" mode="ios">
+      <ion-icon slot="start" name="cash-outline"></ion-icon>
+      Recargar
+    </ion-button>
+  </div>
+  <div class="section-logo">
+    <ion-img class="logo" src="../../../../assets/images/logos/logo_izul-secundario.png"></ion-img>
+  </div>
+</ion-content>

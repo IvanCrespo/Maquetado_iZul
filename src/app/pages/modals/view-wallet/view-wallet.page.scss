@@ -1,0 +1,125 @@
+ion-content {
+    --background: url(../../../../assets/images/fondos/fondo_secundario.png) 0 0/100% 100% no-repeat;
+
+    ion-header {
+        ion-list {
+            padding: 6vh 2vh 3vh 2vh;
+            background: transparent;
+
+            ion-item {
+                --background: transparent;
+                --inner-padding-end: 0px;
+                --padding-start: 6px;
+
+                ion-buttons {
+                    ion-button {
+                        --background: transparent;
+                        width: auto;
+
+                        ion-icon {
+                            color: #fff;
+                            --ionicon-stroke-width: 40px !important;
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .container-tarjeta {
+        .tarjeta {
+            border-radius: 20px;
+            --background: url(../../../../assets/images/fondos/fondo_tarjeta.png) 0 0/100% 100% no-repeat;
+            width: 96%;
+            left: 0;
+            top: 9vh;
+            margin: 0 auto;
+
+            ion-card-content {
+                .section-tarjeta {
+                    display: flex;
+                    /* align-items: center;
+                    justify-content: space-between; */
+                    align-items: center;
+                    justify-content: flex-end;
+                }
+
+                .section-codTarjeta {
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 0 10px;
+                    padding-bottom: 16px;
+
+                    p {
+                        padding-top: 30px;
+                        font-size: 20px;
+                        color: #fff;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .section-infoTarjeta {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .title-tarjeta {
+                        font-size: 10px;
+                        font-weight: 600;
+                        color: #fff;
+                    }
+
+                    .sub-tarjeta {
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #fff;
+                        letter-spacing: 1px;
+                    }
+
+                    .total-tarjeta {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    .container-accionWallet {
+        padding-top: 100px;
+        display: flex;
+        justify-content: center;
+
+        ion-button {
+            --background: #fff;
+            --border-radius: 28px;
+            --padding-end: 24px;
+            --padding-start: 24px;
+            --padding-top: 30px;
+            --padding-bottom: 30px;
+            color: #045A62;
+            font-size: 18px;
+            font-weight: 600;
+
+            ion-icon {
+                color: #D6852B;
+                --ionicon-stroke-width: 40px !important;
+            }
+        }
+    }
+
+    .section-logo {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+
+        .logo {
+            float: right;
+            margin-right: 18px;
+            margin-bottom: 16px;
+            width: 38%;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+ion-content {
+    --background: #dddddd;
+
+    /* Container Deshboard */
+    .container-dashboard {
+        height: var(--height-container-principal);
+        margin-top: 10px;
+
+        .card-principal {
+            border-radius: 28px;
+
+            .section-balance {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+
+                img {
+                    margin-right: 15px;
+                    width: 44%;
+                }
+
+                .info-balance {
+                    p {
+                        color: #e1861c;
+                        font-family: var(--font-familySubtitle-primary);
+                        font-size: 16px;
+                    }
+
+                    h3 {
+                        color: #02635d;
+                        font-family: var(--font-familyTitle-primary);
+                        font-size: 16px;
+
+                        ion-label {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-secondary {
+            --background: var(--background-simple);
+            width: 80%;
+            border-radius: 28px;
+            margin: -52px auto 18px auto;
+
+            ion-card-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                ion-buttons {
+                    ion-button {
+                        --background: transparent;
+                        width: auto;
+
+                        ion-icon {
+                            color: #fff;
+                            font-size: 38px;
+                            cursor: pointer;
+                            --ionicon-stroke-width: 40px;
+                        }
+                    }
+                }
+
+                .tianguis {
+                    text-align: center;
+                    margin: 0 auto;
+
+                    p {
+                        color: var(--color-text-second);
+                        font-weight: 700;
+                    }
+
+                    ion-icon {
+                        padding: 10px;
+                        background: var(--background-contenido);
+                        border-radius: 50%;
+                        color: #02635d;
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+
+        .card-dashboard {
+            border-radius: 28px;
+            padding: 6px;
+
+            .txtRecaudacion {
+                color: #e1861c;
+                font-family: var(--font-familySubtitle-primary);
+                font-size: 16px;
+
+                ion-label {
+                    color: #02635d;
+                    font-size: 18px;
+                    float: right;
+                    font-family: var(--font-familyTitle-primary);
+                }
+            }
+
+            .txtPadding {
+                padding-bottom: 12px;
+            }
+        }
+    }
+}

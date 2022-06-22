@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>
+        <h2>Asignación de Lugares</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-header>
+
+<ion-content>
+  <div class="giros-section">
+    <ion-card>
+      <ion-card-content>
+        <ion-list lines="none" class="bg-transparent">
+          <ion-item lines="inset">
+            <ion-label position="floating">Giro:</ion-label>
+            <ion-input type="text" [(ngModel)]="s_giro" name="s_giro" required></ion-input>
+          </ion-item>
+          
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

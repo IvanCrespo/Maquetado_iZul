@@ -1,0 +1,178 @@
+ion-header {
+    background: #dddddd;
+    ion-list {
+        background: #02635d !important;
+        border-radius: 0 0 28px 28px;
+        padding: 9.5vh 0vh 1.5vh 0vh;
+
+        ion-icon {
+            color: #fff !important;
+        }
+
+        ion-item {
+            --background: #02635d;
+
+            h2 {
+                font-weight: 700;
+                font-size: 18px;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+ion-content {
+    --background: #dddddd;
+    .cards-section {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 62px;
+    }
+
+    .card-container {
+        .back-btn ion-button {
+            width: 54px;
+            height: 54px;
+
+            ion-icon {
+                color: #e1861c;
+                --ionicon-stroke-width: 7vh;
+                font-size: 35px;
+            }
+        }
+
+        .list-md {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        ion-card {
+            --background: #fff;
+            --color: #474747;
+            border-radius: 10px;
+            padding-bottom: 30px;
+            box-shadow: 0px 4px 16px rgba(88, 88, 88, 0.4);
+
+            ion-card-header {
+                ion-card-title {
+                    margin: 14px auto;
+                    font-weight: 500;
+                    font-size: 16px;
+                    text-align: justify;
+                }
+            }
+            ion-card-content {
+                ion-list {
+                    padding: 0;
+
+                    ion-item {
+                        // --background: #02635d;
+
+                        ion-label {
+                            margin: 0;
+                            cursor: pointer;
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+
+                    hr {
+                        border: 1px solid #02635d;
+                        border-radius: 5px;
+                        height: 0px;
+                    }
+                }
+
+                .lugaresDisponibles {
+                    .bg-titleLugares {
+                        background: #02635d;
+                        .titleLugares {
+                            font-size: 16px;
+                            color: #fff;
+                        }
+                        .f-weight {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .bg-normalLugares {
+                        cursor: pointer;
+                        ion-col {
+                            color: #1a1a1a;
+                            font-size: 15px;
+                            font-weight: 500;
+                            padding-inline-start: 0px;
+                            padding-inline-end: 0px;
+                        }
+
+                        hr {
+                            border: 1px solid #02635d;
+                            border-radius: 5px;
+                            height: 0px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button-save {
+            padding: 6px 10px;
+
+            .btn-guardar {
+                display: flex;
+                align-items: center;
+                float: right;
+                background-color: #fff;
+                border-radius: 10px;
+                border: 2px solid #e1861c;
+                color: #ffffff;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 700;
+                height: 42px;
+                margin: 0;
+                padding: 10px 16px;
+                box-shadow: 0px 10px 20px rgba(88, 88, 88, 0.4);
+
+                ion-label,
+                ion-icon {
+                    color: #e1861c;
+                }
+
+                ion-icon {
+                    font-size: 22px;
+                }
+            }
+
+            .btn-guardar:hover,
+            .btn-guardar:focus {
+                background-color: #e1861c;
+
+                ion-label,
+                ion-icon {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .bg-transparent {
+        background: transparent;
+    }
+
+    .myBackground {
+        --background: #02635d;
+    }
+
+    .myBackgroundLugares {
+        background: #e1861c;
+    }
+
+    .colorFont {
+        color: #fff;
+    }
+}

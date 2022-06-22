@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <app-header></app-header>
+  <div class="container-tianguis">
+    <ion-item class="search" lines="none">
+      <ion-searchbar debounce="100" [(ngModel)]="filter" animated="true" placeholder="Buscar"></ion-searchbar>
+    </ion-item>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Elige tianguis</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="groupTianguis">
+        <ion-list *ngFor="let t of tianguis | filter:filter">
+          <ion-item lines="none" (click)="selectTianguis(t.id_tianguis, t.s_nombre)">
+            <ion-label>{{t.s_nombre}}</ion-label>
+          </ion-item>
+          <hr>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <div class="section-logo">
+      <ion-img class="logo" src="../../../../assets/images/logos/logo_izul-principal.png"></ion-img>
+    </div>
+  </div>
+</ion-content>

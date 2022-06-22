@@ -1,0 +1,88 @@
+<ion-header class="ion-no-border">
+  <ion-list lines="none">
+    <!-- <ion-item>
+      <ion-buttons>
+        <ion-button>
+          <ion-icon slot="icon-only" name="reorder-four-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item> -->
+    <ion-item>
+      <ion-label>
+        <h2>Asignación de Lugares</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="cards-section">
+    <div class="card-container" *ngIf="activateTianguis == true">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Seleccione el Tianguis en el que se encuentra laborando:</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list *ngFor="let t of tianguis; index as i">
+            <ion-item [id]="'demoTianguis'+ t.id_nombre" lines="none" class="ion-text-center"
+              (click)="escogerTianguis(t.id_nombre, t.s_nombre_tianguis)">
+              <ion-label>{{t.s_nombre_tianguis}}</ion-label>
+            </ion-item>
+            <hr>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <div class="button-save">
+        <button class="btn-guardar" (click)="seleccionarTianguis()">
+          <ion-label>Siguiente</ion-label>
+          <ion-icon name="caret-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Asiganción de Lugares -->
+    <div class="card-container" *ngIf="activateLugares == true">
+      <ion-buttons class="back-btn">
+        <ion-button (click)="backTianguis()">
+          <ion-icon slot="icon-only" name="return-down-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Seleccione alguno de los lugares disponibles:</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-grid class="lugaresDisponibles">
+            <ion-row class="bg-titleLugares">
+              <ion-col class="titleLugares f-weight" size="8">
+                Lugar
+              </ion-col>
+              <ion-col class="titleLugares ion-text-center" size="4">
+                Metros
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-grid class="lugaresDisponibles" *ngFor="let l of lugares; index as i">
+            <ion-row class="bg-normalLugares" [id]="'demoLugares'+ l.id_lugar"
+              (click)="escogerLugar(l.id_lugar, l.s_nombre_lugar, l.metros)">
+              <ion-col size="8">
+                {{l.s_nombre_lugar}}
+                <hr>
+              </ion-col>
+              <ion-col size="4" class="ion-text-center">
+                {{l.metros}}
+                <hr>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      <div class="button-save">
+        <button class="btn-guardar" (click)="seleccionarLugar()">
+          <ion-label>Siguiente</ion-label>
+          <ion-icon name="caret-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</ion-content>

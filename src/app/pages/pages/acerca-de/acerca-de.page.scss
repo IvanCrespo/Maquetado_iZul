@@ -1,0 +1,63 @@
+ion-content {
+    --background: #dddddd;
+
+    .container-impresora {
+        padding-top: 30px;
+        ion-card {
+            --background: #fff;
+            border-radius: 10px;
+
+            ion-card-title {
+                color: #02635d;
+                text-align: center;
+                font-size: 22px;
+                font-family: var(--font-familySubtitle-primary);
+            }
+
+            .impresoras {
+                ion-item {
+                    --background: #fff;
+                    --color: rgb(0, 0, 0);
+                }
+            }
+
+            .section-btnImpresora {
+                text-align: center;
+                padding-top: 10px;
+
+                .btn_addImpresora {
+                    --background: #e1861c;
+                    text-transform: none;
+                    font-size: 12px;
+
+                    ion-icon {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .section-btnReload {
+                .btn_reload {
+                    --background: #e1861c;
+                    text-transform: none;
+                    font-size: 12px;
+                    margin: 5px 20px 2px 0px;
+                }
+            }
+        }
+    }
+
+    .section-logo {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+
+        .logo {
+            float: right;
+            margin-right: 18px;
+            margin-bottom: 16px;
+            width: 38%;
+        }
+    }
+}

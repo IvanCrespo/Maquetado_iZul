@@ -1,0 +1,144 @@
+ion-content {
+    --background: url(../../../../assets/images/fondos/fondo_secundario.png) 0 0/100% 100% no-repeat;
+
+    ion-header {
+        ion-list {
+            padding: 6vh 2vh 3vh 2vh;
+            background: transparent;
+
+            ion-item {
+                --background: transparent;
+                --inner-padding-end: 0px;
+                --padding-start: 6px;
+
+                ion-buttons {
+                    ion-button {
+                        --background: transparent;
+                        width: auto;
+
+                        ion-icon {
+                            color: #fff;
+                            --ionicon-stroke-width: 40px !important;
+                            font-size: 30px;
+                        }
+                    }
+
+                    .margin-btn {
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+
+    .acciones-tarjeta {
+        padding-top: 75px;
+
+        .seccion_title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .cantidad-dinero {
+            padding: 24px 20px 8px 20px;
+            display: flex;
+            justify-content: space-between;
+
+            .lbl-text {
+                font-size: 18px;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            .lbl-dinero {
+                font-size: 20px;
+                font-weight: 600;
+                color: #d6852b;
+            }
+
+            .btn-cash {
+                --background: #d6852b;
+                --border-radius: 50px;
+                height: 55px;
+                width: auto;
+
+                ion-icon {
+                    font-size: 24px;
+                    color: #fff;
+                }
+            }
+        }
+
+        ion-card {
+            border-radius: 14px;
+
+            ion-card-title {
+                text-align: center;
+                color: #045a62;
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .billete {
+                color: #fff;
+                --background: #d6852b;
+                width: 80%;
+            }
+
+            hr {
+                margin-top: 40px;
+                height: 6px;
+                width: 100%;
+                background-color: #46a7ce;
+            }
+
+            .otraCantidad {
+                margin: 18px auto;
+                --background: #045a62;
+                --border-radius: 28px;
+                --padding-end: 20px;
+                --padding-start: 20px;
+                --padding-top: 22px;
+                --padding-bottom: 22px;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 600;
+
+                ion-icon {
+                    color: #fff;
+                    --ionicon-stroke-width: 40px !important;
+                }
+            }
+
+            .sub-otraCantidad {
+                font-size: 16px;
+                font-weight: 600;
+                color: #045a62;
+            }
+
+            ion-input {
+                margin-top: 10px;
+                font-size: 14px;
+                font-weight: 600;
+                --color: #d6852b;
+                border-radius: 10px;
+                border: 1px solid #045a62;
+            }
+        }
+
+        .section-logo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: -1;
+
+            .logo {
+                float: right;
+                margin-right: 18px;
+                margin-bottom: 16px;
+                width: 38%;
+            }
+        }
+    }
+}

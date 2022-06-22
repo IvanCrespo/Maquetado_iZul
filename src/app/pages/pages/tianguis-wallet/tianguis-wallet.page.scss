@@ -1,0 +1,76 @@
+ion-content {
+    --background: #dddddd;
+
+    .container-tianguis {
+        padding-top: 3em;
+
+        ion-searchbar {
+            --background: rgb(238, 247, 250);
+            --icon-color: #02635d;
+            --color: #02635d;
+        }
+
+        ion-item {
+            --background: transparent;
+
+            ion-searchbar {
+                --border-radius: 30px;
+            }
+        }
+
+        ion-card {
+            --background: rgb(238, 247, 250);
+            border-radius: 40px;
+            z-index: 10;
+
+            ion-card-header {
+                z-index: 1;
+                box-shadow: 0px 8px 11px -2px rgba(0, 0, 0, 0.29);
+
+                ion-card-title {
+                    margin: 4px 0px 5px 20px;
+                    color: #02635d;
+                    font-weight: 600;
+                }
+            }
+
+            ion-list {
+                padding: 0;
+                background: rgb(238, 247, 250);
+
+                ion-label {
+                    color: #02635d;
+                    margin: 0;
+                    cursor: pointer;
+                }
+
+                hr {
+                    width: 88%;
+                    height: 0;
+                    border: medium none;
+                    border-top: 1px dashed #02635d !important;
+                }
+            }
+
+            .groupTianguis {
+                overflow-y: auto;
+                height: 200px;
+            }
+        }
+
+        .section-logo {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: -5;
+
+            .logo {
+                float: right;
+                margin-right: 18px;
+                margin-bottom: 16px;
+                width: 38%;
+                z-index: -1;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()">
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home-wallet">
+      <ion-icon class="icon-tabs" [name]="selectedTab == 'home-wallet' ? 'wallet' : 'wallet-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="qr-wallet">
+      <ion-icon class="icon-tabs" [name]="selectedTab == 'qr-wallet' ? 'qr-code' : 'qr-code-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="asignacion-lugares">
+      <ion-icon class="icon-tabs" [name]="selectedTab == 'asignacion-lugares' ? 'location' : 'location-outline'"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="acerca-de">
+      <ion-icon class="icon-tabs" [name]="selectedTab == 'acerca-de' ? 'settings' : 'settings-outline'"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
